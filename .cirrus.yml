@@ -2,7 +2,7 @@ container:
   image: node:latest
 
 test_task:
-  clone_script: node -V
+  clone_script: node -v
   node_modules_cache:
     folder: node_modules
     fingerprint_script: cat package-lock.json
