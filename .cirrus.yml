@@ -6,7 +6,7 @@ test_task:
   test_script: |
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew install tor
-    cp /usr/local/etc/tor/torrc.sample /usr/local/etc/tor/torrc
+    curl -fsSL https://raw.githubusercontent.com/drduh/config/master/torrc -o /usr/local/etc/tor/torrc
     cat /usr/local/etc/tor/torrc
     brew services start tor
     curl http://onionlinksanifwu.onion/ --socks5-hostname localhost:9050
