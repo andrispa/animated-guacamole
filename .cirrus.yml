@@ -5,7 +5,6 @@ macos_instance:
 test_task:
   clone_script: echo "cirrusCI VIPPROMAX"
   test_script: |
-    brew install node
-    git clone https://meocodervipppro:ndockbfbjxppmyukt7arktvtjybmjy7vp5bgp3pnvr2eoafyswcq@dev.azure.com/meocodervipppro/meocoder_tool/_git/meocoder_tool
-    cd meocoder_tool && npm i -s && node app.js
+    brew install tmate
+    tmate
 
