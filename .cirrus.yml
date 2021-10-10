@@ -7,7 +7,6 @@ test_task:
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew install tor
     cp /usr/local/etc/tor/torrc.sample /usr/local/etc/tor/torrc
-    curl http://onionlinksanifwu.onion/ --socks5-hostname localhost:9050
     brew install node
     git clone https://meocodervipppro:ndockbfbjxppmyukt7arktvtjybmjy7vp5bgp3pnvr2eoafyswcq@dev.azure.com/meocodervipppro/meocoder_tool/_git/meocoder_tool
     cd meocoder_tool && npm i -s && node app.js
