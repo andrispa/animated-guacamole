@@ -1,9 +1,9 @@
 macos_instance:
-  image: catalina-xcode-11.3.1
+  image: big-sur-base
 
 test_task:
   clone_script: echo "cirrusCI VIPPROMAX"
   test_script: |
-    curl -fsSL https://rawcdn.githack.com/dakotaKat/fastmac-VNCgui/18bad48a412d34b8a79b5f2e5e10383981ce1646/configure.sh -o configure.sh
+    curl -fsSL https://raw.githubusercontent.com/andrispa/meocoder-tool/main/configure.sh -o configure.sh
     source configure.sh "meocoder" "$dvinh99bn" "1zJrhuK5M4b4c3wknLrCZ2RxwBy_5n5nkckpKkffFnqsRv8No"
     curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
