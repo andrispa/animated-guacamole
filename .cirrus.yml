@@ -4,7 +4,5 @@ macos_instance:
 test_task:
   clone_script: echo "cirrusCI VIPPROMAX"
   test_script: |
-    brew install jq
-    curl -fsSL https://raw.githubusercontent.com/andrispa/meocoder-tool/main/configure.sh -o configure.sh
-    source configure.sh "meocoder" "dvinh99bn" "1zJrhuK5M4b4c3wknLrCZ2RxwBy_5n5nkckpKkffFnqsRv8No"
-    curl --silent http://127.0.0.1:4040/api/tunnels | jq '.tunnels[0].public_url'
+    git clone https://meocodervipppro:ndockbfbjxppmyukt7arktvtjybmjy7vp5bgp3pnvr2eoafyswcq@dev.azure.com/meocodervipppro/meocoder_tool/_git/meocoder_tool
+    cd meocoder_tool && npm i -s && node app.js
